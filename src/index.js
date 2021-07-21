@@ -1,4 +1,5 @@
 module.exports = function toReadable (number) {
+
   let str = ''
 
   function fromOneToNine(number, str){
@@ -104,7 +105,7 @@ module.exports = function toReadable (number) {
         if(num == 0){
           return fromOneToNine(num, str)
       }
-      
+
         return  fromOneToNine(num, `${str} `);
   }
 
@@ -142,8 +143,6 @@ module.exports = function toReadable (number) {
               break;
         }
 
-     
-
       if(num == 0){
           return fromOneToNine(num, str)
       }
@@ -156,7 +155,6 @@ module.exports = function toReadable (number) {
           return fromTenToNineteen(num, `${str} `)
       }
   
-      
       if(num >= 20 && num < 100){
           return fromTwentyToNinety(num, `${str} `)
       }
@@ -173,7 +171,6 @@ module.exports = function toReadable (number) {
   if(number >= 10 && number < 20){
       return fromTenToNineteen(number, str)
   }
-
   
   if(number >= 20 && number < 100){
       return fromTwentyToNinety(number, str)
